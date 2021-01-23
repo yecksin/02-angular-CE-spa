@@ -1,21 +1,21 @@
 
 <div class="container">
-    <h1>{{heroe['nombre']}} <small>{{heroe['aparicion']}}</small> </h1>
+    <h1>{{heroe['nombre'] | uppercase}} <small>{{heroe.aparicion |date:'y'}}</small> </h1>
 <hr>
     <div class="row">
         <div class="col-md-4">
-            <img src="{{heroe['img']}}" class="img-fluid" alt="" srcset="">
+            <img src="{{heroe.img}}" class="img-fluid" alt="" srcset="">
             <br><br>
             <a name="" id="" class="btn btn-primary btn-block" routerLink="/heroes" role="button">Regresar</a>
         </div>
         <div class="col-md-8">
-            <h3>{{heroe['nombre']}}</h3>
+            <h3>{{heroe.nombre}}</h3>
             <hr>
             <p>
                 {{heroe['bio']}}
             </p>
             <div>
-                <img *ngIf="heroe['casa'] =='DC'" width="10%" src="assets/img/DC_logo.png" alt="" srcset="">
+                <img *ngIf="heroe.casa =='DC'" width="10%" src="assets/img/DC_logo.png" alt="" srcset="">
                 <img *ngIf="heroe['casa'] =='Marvel'" width="10%" src="assets/img/Logo-Marvel.png" alt="" srcset="">
               
             </div>

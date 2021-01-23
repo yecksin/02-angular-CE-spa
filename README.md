@@ -67,7 +67,17 @@ html
 ## Recibir datos por ruta
 
 import { ActivatedRoute } from '@angular/router';
-
+  heroe:any;
   constructor(
     private activatedRoute: ActivatedRoute
     ) { }
+
+        this.activatedRoute.params.subscribe(params =>{
+      console.log(this._heroes.getHeroe(params['id']));
+      this.heroe =this._heroes.getHeroe(params['id'])
+    })
+
+#Pipes
+uppercase
+date:'y'   => se puede configurar con parametros
+<h1>{{heroe['nombre'] | uppercase}} <small>{{heroe.aparicion |date:'y'}}</small> </h1>
