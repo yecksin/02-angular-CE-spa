@@ -77,7 +77,9 @@ import { ActivatedRoute } from '@angular/router';
       this.heroe =this._heroes.getHeroe(params['id'])
     })
 
-#Pipes
+# Pipes
 uppercase
 date:'y'   => se puede configurar con parametros
 <h1>{{heroe['nombre'] | uppercase}} <small>{{heroe.aparicion |date:'y'}}</small> </h1>
+
+# buscador
