@@ -11,7 +11,7 @@ export class HeroesComponent implements OnInit {
   heroes:Heroe[] = [];
   constructor(
     private _heroesService:HeroesService,
-   
+    private router: Router,
 
     ) { 
 
@@ -21,7 +21,9 @@ export class HeroesComponent implements OnInit {
     this.heroes = this._heroesService.getHeroes();
   }
 
-
+  verHeroe(i:number){
+    this.router.navigate(['/heroe',i])
+  }
 
 }
 

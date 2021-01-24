@@ -91,3 +91,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
   insertado en otro componente :
   <app-heroe-tarjeta [heroe]=heroe [index]=i *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+
+# Output
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+@Output() heroeSeleccionado: EventEmitter<number> = new EventEmitter();
+
+
+<app-heroe-tarjeta (heroeSeleccionado)="verHeroe(i)" [heroe]=heroe [index]=i *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
