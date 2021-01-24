@@ -1,16 +1,7 @@
 <div class="container">
   <h1>Buscando: <small>{{termino}}</small></h1>
 <div class="card-columns">
-    <div class="card" *ngFor="let heroe of heroes; let i = index">
-      <img [src]="heroe.img" class="card-img-top" [alt]="heroe.img">
-      <div class="card-body">
-        <h5 class="card-title">{{heroe.nombre}}</h5>
-        <p class="card-text">{{heroe.bio}}</p>
-        <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
-        <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">Ver más...</button>
-        <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver más...</a> -->
-      </div>
-    </div>
+  <app-heroe-tarjeta [heroe]=heroe [index]=i *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
   </div>
 <div *ngIf="heroes.length ==0" class="alert alert-primary" role="alert">
   <strong>No se ecnontraron Heroes con el termino {{termino}}</strong>

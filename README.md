@@ -83,3 +83,11 @@ date:'y'   => se puede configurar con parametros
 <h1>{{heroe['nombre'] | uppercase}} <small>{{heroe.aparicion |date:'y'}}</small> </h1>
 
 # buscador
+
+# @Input
+import { Component, Input, OnInit } from '@angular/core';
+  @Input() heroe:any = {}
+  @Input() index:number=0;
+
+  insertado en otro componente :
+  <app-heroe-tarjeta [heroe]=heroe [index]=i *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
