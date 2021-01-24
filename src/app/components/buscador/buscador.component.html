@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Buscando: <small>{{termino}}</small></h1>
 <div class="card-columns">
-  <app-heroe-tarjeta [heroe]=heroe [index]=i *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+  <app-heroe-tarjeta [heroe]=heroe [index]=heroe.idx *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
   </div>
 <div *ngIf="heroes.length ==0" class="alert alert-primary" role="alert">
   <strong>No se ecnontraron Heroes con el termino {{termino}}</strong>
